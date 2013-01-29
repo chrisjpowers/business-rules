@@ -299,6 +299,9 @@ describe('RuleEngine', function() {
         {any: [
           {name: "age", operator: "greaterThanEqual", value: "18"},
           {name: "permissionSlipSigned", operator: "present", value: null}
+        ]},
+        {none: [
+          {name: "height", operator: "lessThanEqual", value: "5"}
         ]}
       ]};
     });
@@ -309,6 +312,9 @@ describe('RuleEngine', function() {
       expect(engine.matches({name: "Joe", age: 17, permissionSlipSigned: false})).toBeFalsy();
       expect(engine.matches({name: "Joe", age: 17})).toBeFalsy();
       expect(engine.matches({name: "", age: 22})).toBeFalsy();
+      expect(engine.matches({name: "Joe", age: 14, height:5})).toBeFalsy();
+      expect(engine.matches({name: "Joe", age: 18, height:4.2})).toBeFalsy();
+      expect(engine.matches({name: "Joe", age: 19, height:6})).toBeTruthy();
     });
   });
 

@@ -14,17 +14,17 @@
   padding-left: 60px;
 }
 
-  .conditional .all-any-wrapper {
+  .conditional .all-any-none-wrapper {
     margin: 5px 20px 5px -60px;
     display: -moz-inline-stack;
     display: inline-block;
   }
 
-.all-any {
+.all-any-none {
   margin-right: 10px;
 }
 
-.all-any-wrapper, .conditional, .rule {
+.all-any-none-wrapper, .conditional, .rule {
   margin: 10px 0;
 }
 
