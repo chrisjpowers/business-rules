@@ -96,7 +96,7 @@ var conditions, actions, nameField, ageField, occupationField, submit;
 
     submit.click(function(e) {
       e.preventDefault();
-      var engine = new BusinessRules.RuleEngine({
+      var engine = new RuleEngine({
         conditions: conditions.conditionsBuilder("data"),
         actions: actions.actionsBuilder("data")
       });
