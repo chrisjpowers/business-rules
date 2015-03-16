@@ -73,7 +73,7 @@ Here's an example of what a "Send Email" action could look like:
 
 ```javascript
 $("#myDiv").actionsBuilder({fields: [
-  {label: "Send Email", value: "sendEmail", fields: [
+  {label: "Send Email", name: "sendEmail", fields: [
     {label: "To", name: "to", fieldType: "text"},
     {label: "CC", name: "cc", fieldType: "text"},
     {label: "BCC", name: "bcc", fieldType: "text"},
